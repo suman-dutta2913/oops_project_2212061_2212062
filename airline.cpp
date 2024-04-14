@@ -191,9 +191,9 @@ int main() {
             if (status) {
                 cout << "Reservation found." << endl;
             }
-						else{
-							cout<<"Reservation not found"<<endl;
-						}
+	    else{
+		cout<<"Reservation not found"<<endl;
+            }
             Sleep(3000);
         }
         else if (val == 3) {
