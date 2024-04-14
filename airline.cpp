@@ -182,9 +182,9 @@ int main() {
 
             bool status = false;
             if (!flight1.checkConfirmationStatus(confirmationCode) && !flight2.checkConfirmationStatus(confirmationCode) && !flight3.checkConfirmationStatus(confirmationCode)) {
-							status = false;          
+	      status = false;          
             }
-            else {
+            else {		    
               status = true;
             }
             
