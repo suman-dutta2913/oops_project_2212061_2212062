@@ -84,7 +84,7 @@ public:
     bool checkConfirmationStatus(string confirmationCode) {
         for (const auto &code : confirmationCodes) {
             if (code == confirmationCode) {
-                cout << "International Flight Reservation Confirmed!" << endl;
+                cout << "Reservation Confirmed!" << endl;
                 return true;
             }
         }
@@ -147,7 +147,7 @@ public:
     bool checkConfirmationStatus(string confirmationCode) {
         for (const auto &code : confirmationCodes) {
             if (code == confirmationCode) {
-                cout << "Domestic Flight Reservation Confirmed!" << endl;
+                cout << "Reservation Confirmed!" << endl;
                 return true;
             }
         }
@@ -269,7 +269,7 @@ int main() {
             } 
             else if (reserveChoice == 2) {
               system("cls");
-              display_international();
+              display_domestic();
               string flight;
               int numSeats;
               cout << "Enter Flight No: ";
@@ -292,7 +292,7 @@ int main() {
             if (!confirmationCode.empty()) {
                 cout << "Reservation Confirmed! Confirmation Code: " << confirmationCode << endl;
             }
-            Sleep(3000);
+            Sleep(7000);
         } else if (val == 2) {
             system("cls");
             string confirmationCode;
@@ -302,7 +302,8 @@ int main() {
             bool status = false;
             if (!flight1.checkConfirmationStatus(confirmationCode) &&
                 !flight2.checkConfirmationStatus(confirmationCode) &&
-                !flight3.checkConfirmationStatus(confirmationCode)) {
+                !flight3.checkConfirmationStatus(confirmationCode) &&
+                !flight4.checkConfirmationStatus(confirmationCode)) {
                 status = false;
             } else {
                 status = true;
@@ -313,13 +314,13 @@ int main() {
             } else {
                 cout << "Reservation not found" << endl;
             }
-            Sleep(5000);
+            Sleep(7000);
         } else if (val == 3) {
             exit = true;
             cout << "Goodbye!" << endl;
         } else {
             cout << "Invalid choice. Please enter a valid option." << endl;
-            Sleep(3000);
+            Sleep(7000);
         }
     }
 }
